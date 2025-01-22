@@ -38,9 +38,11 @@ The project follows the **MVC** architecture:
    cd personal_portfolio
 
 2. Install dependencies:
+    ```bash
     flutter pub get
 
 3. Run the application:
+    ```bash
     flutter run
 
 ## Usage
