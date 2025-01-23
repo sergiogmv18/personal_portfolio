@@ -1,0 +1,16 @@
+[
+    {
+      "name":"Cielo de Cebreros Plaza",
+      "descriptions":"web development project for a hotel located in the picturesque town of Cebreros, Spain. The website was designed to provide an intuitive and optimized user experience, incorporating technologies such as HTML, CSS, JavaScript, PHP, and a management system based on Laravel.",
+      "url":"https://tumasyohoteles.com/",
+      "photoPath":"assets/img/cielodecebreros.png"
+    },
+    {
+        "name":"On Wheels auto sale",
+        "descriptions":"development of a complete website for 'On Wheels Auto Sales,' a car dealership. The site features a user-friendly interface for customers to browse the vehicle inventory and make inquiries, along with an administrative section built with Flutter and Laravel for efficient management of inventory, users, and transactions.",
+        "url":"https://www.onwheelsautosales.com/web/",
+        "photoPath":"assets/img/onwheels.png"
+    }
+   
+]
+  

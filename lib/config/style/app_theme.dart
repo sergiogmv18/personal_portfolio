@@ -23,6 +23,7 @@ class PersonalPortfolioThemes {
     ),
     dividerColor: CustomColor.black,
     disabledColor:  CustomColor.black,
+    cardColor: CustomColor.cardsColors,
     iconTheme: const IconThemeData(color: Colors.black),  
   );
 }

@@ -9,6 +9,8 @@ void main() {
       providers: [
         ChangeNotifierProvider.value(value: TranslationController.getInstance()),
         ChangeNotifierProvider<LocaleFixed>(create: (_) => LocaleFixed()),
+
+        
       ],
       child:const PersonalPortfolio(),
     )
