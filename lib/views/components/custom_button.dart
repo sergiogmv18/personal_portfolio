@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
       onPressed:onPressed,
       style: ButtonStyle(
         padding: WidgetStateProperty.all(EdgeInsets.symmetric(vertical: 15, horizontal: 30)),
-        backgroundColor: WidgetStateProperty.all(CustomColor.color3),
+        backgroundColor: WidgetStateProperty.all(CustomColor.button),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(kBorderRadius)),
         ),

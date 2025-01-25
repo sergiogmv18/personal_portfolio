@@ -1,6 +1,6 @@
 const kMaxWidth = 1250.0;
 const kPadding = 20.0;
-const double kBorderRadius = 5;
+const double kBorderRadius = 20;
 
 const emailAddress ='sergiogmv18@gmail.com';
 const fullName ='Sergio Marcano';

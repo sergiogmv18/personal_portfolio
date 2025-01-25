@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,7 +18,7 @@ class HearderCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     final displayLocal = Provider.of<LocaleFixed>(context).locale;
     return Container(
-      color: CustomColor.color1,
+      color: CustomColor.black,
       height: 50,
       width: MediaQuery.of(context).size.width,
       child: Row(
@@ -32,7 +31,7 @@ class HearderCustom extends StatelessWidget {
                 Scaffold.of(context).openDrawer();
               },
               icon:const Icon(Icons.menu), 
-              color: CustomColor.black, 
+              color: CustomColor.yellow, 
               iconSize: 40
             )),  
           ],
@@ -40,7 +39,7 @@ class HearderCustom extends StatelessWidget {
           IconButton(
             color: CustomColor.white,
             highlightColor: CustomColor.color1,
-            hoverColor: CustomColor.color3,
+            hoverColor: CustomColor.yellow,
             tooltip:"Linkedin",
             onPressed:()async{
               if (await canLaunchUrl(Uri.parse(RoutesPath.linkedin))) {
@@ -62,7 +61,7 @@ class HearderCustom extends StatelessWidget {
           IconButton(
             color: CustomColor.white,
             highlightColor: CustomColor.color1,
-            hoverColor: CustomColor.color3,
+            hoverColor: CustomColor.yellow,
             tooltip:"GitHub",
             onPressed:()async{
               if (await canLaunchUrl(Uri.parse(RoutesPath.gitHub))) {
@@ -110,7 +109,6 @@ class HearderCustom extends StatelessWidget {
                 onPressed: (){
                   if(const Locale('es') != displayLocal){ 
                     Provider.of<LocaleFixed>(context, listen: false).locale = const Locale('es');
-                  log(displayLocal.languageCode);
                   }
                 }, 
                 icon:SvgPicture.asset(

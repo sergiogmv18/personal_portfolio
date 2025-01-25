@@ -12,5 +12,7 @@ class CustomColor{
   static const color5 = Color(0xffadbecd);
   static const success = Colors.greenAccent;
   static const warning = Colors.orangeAccent;
-  static const cardsColors = Color.fromARGB(255, 169, 180, 185);
+  static const yellow = Color(0xffffbd39);
+  static const button =  Color.fromARGB(255, 93, 177, 80);
+  static const cardsColors =  Color.fromARGB(255, 201, 219, 227);
 }

@@ -17,12 +17,13 @@ import 'package:personal_portfolio/views/components/profile_photo.dart';
 Widget drawerComponent(BuildContext context, {required Locale displayLocal, int? index}) {
   return  Drawer(
     //backgroundColor: CustomColor.color1,
-    backgroundColor: CustomColor.color3,
+    backgroundColor: CustomColor.white,
     child: ListView(
-      padding: EdgeInsets.only(top: kPadding),
+      // padding: EdgeInsets.only(top: kPadding),
       children: [
         Container(
           padding: EdgeInsets.only(top: kPadding, bottom: kPadding),
+          color: CustomColor.black,
           child:Column(
             mainAxisSize: MainAxisSize.min,
             children: [

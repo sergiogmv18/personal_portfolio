@@ -3,12 +3,18 @@ class Projects {
   String? descriptions;
   String? url;
   String? photoPath;
-  Projects ({this.name, this.url, this.photoPath, this.descriptions});
+  String? logo;
+  Projects ({this.name, this.url, this.logo, this.photoPath, this.descriptions});
 
   // GETs
   String? getName(){
     return name;
   }
+
+  String? getLogo(){
+    return logo;
+  }
+
   String? getDescriptions(){
     return descriptions;
   }
@@ -38,6 +44,9 @@ class Projects {
     this.descriptions = descriptions;
   }
 
+   void setLogo(String logo){
+    this.logo = logo;
+  }
 
    // OTHER METHODS
   Map<String, dynamic> toMap() {
@@ -45,7 +54,8 @@ class Projects {
       'name':name,
       'description':descriptions,
       'url':url,
-      'photoPath':photoPath
+      'photoPath':photoPath,
+      'logo':logo
     };
   }
 }

@@ -20,7 +20,9 @@ class Project extends Projects{
       projectWk.setDescriptions(project['descriptions']);
       projectWk.setUrl(project['url']);
       projectWk.setPhotoPath(project['photoPath']);
+      projectWk.setLogo(project['logo']);
       allProjects.add(projectWk);
+
     }
     return allProjects;
   }

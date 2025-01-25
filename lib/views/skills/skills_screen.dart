@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/config/constants.dart';
 import 'package:personal_portfolio/config/responsive.dart';
@@ -26,12 +24,12 @@ class SkillsScreen extends StatelessWidget {
             builder: (context, app) {
               if (app.connectionState == ConnectionState.done) {
                 List<Skills>? allSkills = app.data;
-                log(allSkills.toString());
                 if (allSkills != null && allSkills.isNotEmpty) {
                   if(Responsive.isDesktop(context)){
                    return Wrap(
                       spacing: 20,
                       runSpacing: 20,
+                      alignment:WrapAlignment.center,
                       children: List.generate(allSkills.length, (index) {
                         return CardsSkills(skillWk:allSkills[index]);
                       }),

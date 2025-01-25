@@ -3,14 +3,35 @@
       "name":"Cielo de Cebreros Plaza",
       "descriptions":"web development project for a hotel located in the picturesque town of Cebreros, Spain. The website was designed to provide an intuitive and optimized user experience, incorporating technologies such as HTML, CSS, JavaScript, PHP, and a management system based on Laravel.",
       "url":"https://tumasyohoteles.com/",
-      "photoPath":"assets/img/cielodecebreros.png"
+      "photoPath":"assets/img/cielodecebreros.png",
+      "logo":"assets/img/logo_cielo_de_cebreros.png"
     },
     {
         "name":"On Wheels auto sale",
         "descriptions":"development of a complete website for 'On Wheels Auto Sales,' a car dealership. The site features a user-friendly interface for customers to browse the vehicle inventory and make inquiries, along with an administrative section built with Flutter and Laravel for efficient management of inventory, users, and transactions.",
         "url":"https://www.onwheelsautosales.com/web/",
-        "photoPath":"assets/img/onwheels.png"
+        "photoPath":"assets/img/onwheels.png",
+        "logo":"assets/img/logo_onwheels.png"
+    },
+    {
+      "name":"NOVA Igreja Batista Curitiba - NIB",
+      "descriptions":"development of a complete mobile application for 'NOVA Igreja Batista Curitiba - NIB,' a Christian church.\n The app provides an intuitive interface for members to stay updated with church news, events, and announcements. It also includes an administrative system built with Flutter and Laravel, allowing church staff to efficiently manage and update content. SQL was used for robust data management, ensuring a reliable and scalable solution.",
+      "url":"https://play.google.com/store/apps/details?id=com.nib.app&hl=es_419",
+      "photoPath":"assets/img/nib.png",
+      "logo":"assets/img/logo_nib.png"
+    },
+    {
+      "name":"Pinhão tecnologia",
+      "descriptions":"i worked in the field of software development, both web and mobile, utilizing leading market technologies such as Flutter, Laravel, Doctrine (ORM), PHP, SQL, SQLite, JavaScript, jQuery, HTML5, CSS, Figma, Bootstrap, and Materialize.\nThroughout my career, I was recognized for my professional growth, advancing from a junior developer to a mid-level position.\nI contributed to and enhanced existing software such as:\nCorretágil\nAnd created apps (iOS/Android) such as:\nSyncapp\nCoolz -> https://www.coolz.ch/\nBlkards -> https://web.blkards.com.br/",
+      "url":"https://www.pinhaotec.com.br/",
+      "photoPath":"assets/img/pinhao_tecnologia.png",
+      "logo":"assets/img/logo_pinhao.png"
     }
+
+    
+
+
+
    
 ]
   

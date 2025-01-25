@@ -1,15 +1,20 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:personal_portfolio/config/constants.dart';
 import 'package:personal_portfolio/config/responsive.dart';
 import 'package:personal_portfolio/config/style/custom_color.dart';
 import 'package:personal_portfolio/controllers/translation_controller.dart';
 import 'package:personal_portfolio/views/components/custom_button.dart';
 import 'package:personal_portfolio/views/components/drawer.dart';
+import 'package:personal_portfolio/views/components/footer.dart';
 import 'package:personal_portfolio/views/components/hearder.dart';
 import 'package:personal_portfolio/views/components/profile_photo.dart';
+import 'package:personal_portfolio/views/components/title.dart';
 import 'package:personal_portfolio/views/components/toast.dart';
 import 'package:personal_portfolio/views/skills/skills_screen.dart';
+import 'package:personal_portfolio/views/works/componets/all_work_resume.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -41,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             HearderCustom(index: index),
 // ABOUT 
             Container(
-              color: CustomColor.color4,
+              color: CustomColor.black,
               width: MediaQuery.of(context).size.width,
               padding:Responsive.isMobile(context) ? EdgeInsets.only(top: 10, bottom: 10): EdgeInsets.only(top: 30, bottom: 30),
               child: Container(
@@ -79,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               textAlign:TextAlign.start,
                               style:Theme.of(context).textTheme.headlineLarge!.copyWith(
                                 fontWeight: FontWeight.bold,
-                                color: CustomColor.white, 
+                                color: CustomColor.yellow, 
                               ),
                             ),
                             AutoSizeText(
@@ -113,8 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: CustomColor.white, 
                                 letterSpacing: 1.2,
                               // fontWeight: FontWeight.bold,
-                              ),
-            
+                                ),
                               ),
                             ),
                           ]),
@@ -127,8 +131,82 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 // SKILLS
             SizedBox(height:kPadding*2),
+            TitlePage(title: 'skills'),
+            SizedBox(height:kPadding*2),
             SkillsScreen(),
+            SizedBox(height:kPadding*2),
+             TitlePage(title: 'clients'),
             
+            SizedBox(height:kPadding*2),
+            AllWorkResume(),
+             SizedBox(height:kPadding*2),
+            AutoSizeText(
+              translate('interested in hiring me for your project?', locale:  Provider.of<LocaleFixed>(context).locale).allInCaps,
+              maxLines: 1,
+              textAlign:TextAlign.center,
+              style:Theme.of(context).textTheme.titleMedium!.copyWith(
+                color: CustomColor.black,
+                fontWeight: FontWeight.bold  
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10),
+              constraints: BoxConstraints(
+                maxWidth:kMaxWidth /2
+              ),
+              child:Text.rich(
+                textAlign: TextAlign.center,
+                TextSpan(
+                  children:[
+                    TextSpan(
+                      text: translate("looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at", locale:displayLocal),
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(color: CustomColor.black),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: GestureDetector(
+                        onTap: () async{
+                          Clipboard.setData(const ClipboardData(text: emailAddress));
+                          showTopSnackBar(
+                            context:context,
+                            message:translate("email address copied", locale: displayLocal),
+                            type: MessageType.info,
+                          ); 
+                        },
+                        child:MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: Text(
+                            ' $emailAddress ',
+                            style: Theme.of(context).textTheme.titleSmall!.copyWith(color: CustomColor.color3),
+                          )
+                        ),
+                      ),
+                    ),
+                    TextSpan(
+                      text: translate("or use the form on the", locale: displayLocal),
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(color: CustomColor.black)
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: GestureDetector(
+                        onTap: (){
+                         context.goNamed(RoutesPath.routeContact);  
+                        },
+                        child:MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: Text(
+                            ' ${translate("contact page.", locale: displayLocal, capitilize: false)}',
+                            style: Theme.of(context).textTheme.titleSmall!.copyWith(color: CustomColor.color3),
+                          )
+                        ),
+                      ),
+                    ),
+                  ]
+                )
+              ),
+            ),            
+            SizedBox(height:kPadding*3),
+            Footer(),
           ],
         ),
       ),

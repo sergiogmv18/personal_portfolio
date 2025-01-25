@@ -5,7 +5,6 @@ import 'package:personal_portfolio/views/contact/contact_screen.dart';
 import 'package:personal_portfolio/views/error_screen.dart';
 import 'package:personal_portfolio/views/home/home_screen.dart';
 import 'package:personal_portfolio/views/works/work_screen.dart';
-import 'package:provider/provider.dart';
 
 class RoutesApp{
   final GoRouter routeConfig = GoRouter(

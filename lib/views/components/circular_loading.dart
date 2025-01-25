@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/config/style/custom_color.dart';
 
 /*
  * circular progress indicator
@@ -8,7 +9,9 @@ import 'package:flutter/material.dart';
  */
 Widget circularProgressIndicator(BuildContext context) {
   return const Center(
-    child: CircularProgressIndicator(),
+    child: CircularProgressIndicator(
+      color: CustomColor.color3
+    ),
   );
 }
 

@@ -5,7 +5,6 @@ import 'package:personal_portfolio/config/constants.dart';
 import 'package:personal_portfolio/config/responsive.dart';
 import 'package:personal_portfolio/config/style/custom_color.dart';
 import 'package:personal_portfolio/controllers/translation_controller.dart';
-import 'package:provider/provider.dart';
 
 
 
@@ -31,7 +30,7 @@ class HeaderMenu extends StatelessWidget {
         child: Text(
           title,
           style:Theme.of(context).textTheme.titleMedium!.copyWith(
-            color: selected ? CustomColor.cardsColors : CustomColor.white,
+            color: selected ? CustomColor.yellow : CustomColor.white,
            // fontWeight: FontWeight.normal
           ),
         ),
@@ -43,7 +42,7 @@ class HeaderMenu extends StatelessWidget {
           Text(
             title,
             style:Theme.of(context).textTheme.titleLarge!.copyWith(
-              color: selected ? CustomColor.cardsColors : CustomColor.white,
+              color: selected ? CustomColor.yellow : CustomColor.black,
               fontWeight: FontWeight.normal
             ),
           ),
@@ -61,7 +60,7 @@ class MobMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height:  MediaQuery.of(context).size.height - 70,
-      color: CustomColor.color1,
+      color: CustomColor.black.withOpacity(0.2),
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +76,7 @@ class MobMenu extends StatelessWidget {
             icon: FaIcon(
               FontAwesomeIcons.house, 
               size: Theme.of(context).textTheme.titleLarge!.fontSize, 
-              color:index == PageIndex.homeScreen ? CustomColor.cardsColors : CustomColor.white ,
+              color:index == PageIndex.homeScreen ? CustomColor.yellow : CustomColor.black,
             ),
           ),
 
@@ -90,7 +89,7 @@ class MobMenu extends StatelessWidget {
             icon: FaIcon(
               FontAwesomeIcons.code, 
               size: Theme.of(context).textTheme.titleLarge!.fontSize, 
-              color:index == PageIndex.worksScreen ? CustomColor.cardsColors : CustomColor.white ,
+              color:index == PageIndex.worksScreen ? CustomColor.yellow : CustomColor.black,
             ),
           ),
           HeaderMenu(
@@ -102,7 +101,7 @@ class MobMenu extends StatelessWidget {
             icon: FaIcon(
               FontAwesomeIcons.user, 
               size: Theme.of(context).textTheme.titleLarge!.fontSize, 
-              color:index ==  PageIndex.contactScreen ? CustomColor.cardsColors : CustomColor.white ,
+              color:index ==  PageIndex.contactScreen ? CustomColor.yellow : CustomColor.black,
             ),
           ),
         ],

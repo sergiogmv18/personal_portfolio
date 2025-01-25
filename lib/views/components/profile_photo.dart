@@ -13,7 +13,7 @@ class ProfilePhoto extends StatelessWidget {
         shape:BoxShape.circle,
         border:Border.all(
           width:0.7, 
-          color: CustomColor.black
+          color: CustomColor.white
         ),
         image:DecorationImage(
           image: AssetImage(ImageAssets.profile),

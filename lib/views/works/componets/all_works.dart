@@ -22,6 +22,7 @@ class AllWorks extends StatelessWidget {
       constraints: BoxConstraints(
         maxWidth:kMaxWidth
       ),
+      color: CustomColor.black,
       child: Column(
         children: [
           FutureBuilder(
@@ -47,8 +48,9 @@ class AllWorks extends StatelessWidget {
                                 Wrap(
                                 crossAxisAlignment: WrapCrossAlignment.center,
                                 children: [
-                                  ProjectsImagen(photoPath: allProjects[index].getPhotoPath()!),
-                                  
+                                  if(allProjects[index].getPhotoPath() != null && allProjects[index].getPhotoPath()!.isNotEmpty)...{
+                                    ProjectsImagen(photoPath: allProjects[index].getPhotoPath()!),
+                                  },
                                   Container(
                                     width: Responsive.isMobile(context) ? MediaQuery.of(context).size.width : 400,
                                     padding: EdgeInsets.only(left: 10, right: 10),
@@ -64,15 +66,17 @@ class AllWorks extends StatelessWidget {
                                         textAlign:TextAlign.start,
                                         style:Theme.of(context).textTheme.headlineLarge!.copyWith(
                                           fontWeight: FontWeight.bold,
-                                          color: CustomColor.black, 
+                                          color: CustomColor.white, 
                                         ),
                                       ),
                                       AutoSizeText(
                                         translate(allProjects[index].getDescriptions()!, locale: Provider.of<LocaleFixed>(context).locale),
-                                        maxLines: 6,
+                                        maxLines: 15,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxFontSize: Theme.of(context).textTheme.titleSmall!.fontSize!,
                                         textAlign:TextAlign.start,
-                                        style:Theme.of(context).textTheme.titleMedium!.copyWith(
-                                          color: CustomColor.color3, 
+                                        style:Theme.of(context).textTheme.titleSmall!.copyWith(
+                                          color: CustomColor.white, 
                                         // fontWeight: FontWeight.bold,
                                         ),
                                       ),                       
